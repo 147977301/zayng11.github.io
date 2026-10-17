@@ -1,0 +1,90 @@
+/* Xiaohongshu catalog: shared compact storefront layout, no product pictures. */
+:root{--green:#ed3955;--green-dark:#c62140;--green-light:#fff0f3;--accent:#ed3955}
+html{scroll-padding-top:90px}
+body{overflow-wrap:break-word}
+.xhs-site .navbar{background:#fff}
+.xhs-site .nav-brand a{font-size:20px;gap:10px}
+.xhs-mark{display:inline-flex;align-items:center;justify-content:center;background:#ed3955;color:#fff;border-radius:11px;width:34px;height:34px;flex-shrink:0;font-size:21px;font-weight:800;box-shadow:0 4px 10px #ed39551a}
+.storefront-home.xhs-site{background:radial-gradient(ellipse at 90% 0,#ffe3eb66,transparent 38%),linear-gradient(150deg,#fff8fa,#f4f7fb)}
+.storefront-home .main-container{max-width:1120px}
+.storefront-home .hero-section{padding:38px 0 26px}
+.hero-eyebrow{display:block;color:#af3651;font-size:13px;letter-spacing:1px;margin-bottom:12px}
+.storefront-home .hero-text h1{font-size:39px;line-height:1.4;color:#252b37;letter-spacing:0}
+.storefront-home .hero-text p{max-width:800px;line-height:1.8;margin-top:10px;font-size:16px}
+.storefront-home .filter-section{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+.storefront-home .filter-btn{width:auto;padding:10px 15px;min-height:40px;font-size:13px}
+.storefront-home .filter-btn.active{background:#ed3955;box-shadow:0 4px 14px #ed395528;color:white}
+.catalog-heading{margin-bottom:7px}
+.catalog-heading::before{background:#ed3955}
+.catalog-intro{font-size:13px;line-height:1.7;color:#73808c;margin:0 0 16px}
+/* Override image-card placement with a text-first layout. */
+.storefront-home .product-table tbody tr,.storefront-home .product-table tbody tr:not(.featured-product){display:grid;grid-template-columns:minmax(0,1fr) 74px 100px 96px;grid-template-rows:auto;column-gap:18px;row-gap:0;padding:20px 22px;border-radius:16px;margin-bottom:12px;align-items:center;background:#fff;border:1px solid #e9e5ec}
+.storefront-home .product-table tbody td:first-child,.storefront-home .product-table tbody tr:not(.featured-product) td:first-child{display:block;grid-column:1;grid-row:1;padding:0}
+.storefront-home .product-summary,.storefront-home .product-summary-copy{display:block}
+.storefront-home .product-table .title,.storefront-home .product-table tbody tr:not(.featured-product) .title{display:block;font-size:17px;line-height:1.7;padding:0;color:#222d3b;font-weight:700}
+.storefront-home .product-table .title:hover{color:#cc2546}
+.storefront-home .product-summary-copy small,.storefront-home .product-table tbody tr:not(.featured-product) td:first-child small{display:block;font-size:12px;line-height:1.7;color:#83909b;margin-top:6px;white-space:normal}
+.storefront-home .product-table td[data-label="库存"]{grid-column:2;grid-row:1;text-align:center;color:#13a45a;font-size:12px}
+.storefront-home .product-table td[data-label="价格"]{grid-column:3;grid-row:1;font-size:25px;line-height:1.4}
+.price-unit{font-weight:400;color:#8a929e;font-size:11px;padding-left:3px}
+.storefront-home .product-table td[data-label="购买"]{grid-column:4;grid-row:1;align-self:center}
+.storefront-home .product-table .buy-link{background:#ed3955;color:white;box-shadow:none;padding:9px 10px;font-size:13px}
+.xhs-site .btn-primary{background:#ed3955;box-shadow:0 5px 15px #ed39551a}
+.xhs-site .btn-primary:hover,.storefront-home .product-table .buy-link:hover{background:#d62543}
+.xhs-site .payment-method.selected{border-color:#ed3955;background:#fff4f6}
+.xhs-site .payment-method.selected::after{color:#ed3955}
+.xhs-site .total-price{border-color:#ed3955;background:linear-gradient(90deg,#fff5f6,#ffe8ec)}
+.xhs-site .total-amount,.xhs-site .product-d-price{color:#ed3955}
+.xhs-site .delivery-note{background:#fff6f8;border-color:#f5e1e6}
+.xhs-site .delivery-note h4{color:#7d3b4e}
+.xhs-site .delivery-note p{color:#806a72}
+.xhs-site .guide-links a{background:#fff0f3;color:#b82b49}
+.xhs-site .product-return-links{background:#fff4f7}
+.xhs-site .product-return-links a{color:#b82b49}
+.xhs-site .product-spec-grid .spec-value.highlight{color:#0aa65a}
+.xhs-site .product-spec-grid .spec-label i{color:#0bbd62}
+.xhs-site .product-spec-grid .spec-value.unverified{color:#7c8795}
+.xhs-site .product-d-description h3{font-size:19px;line-height:1.7;margin:24px 0 10px}
+.xhs-site .description-d-content p{font-size:15px;line-height:1.95;margin:0 0 14px}
+.xhs-site .product-d-description h3:first-child{margin-top:0}
+.xhs-site .breadcrumb{flex-wrap:wrap;line-height:1.7;overflow-wrap:anywhere}
+.xhs-site .breadcrumb .current{white-space:normal;overflow:visible;text-overflow:clip}
+.xhs-site .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.xhs-site .product-grid>*{min-width:0}
+.xhs-site .home-guide,.xhs-site .policy-box{border-color:#eee6eb}
+.xhs-site .faq-question{width:100%;text-align:left;border:0;font-family:inherit;gap:12px;line-height:1.7}
+.xhs-site .faq-question span:first-child{flex:1;min-width:0}
+.xhs-site .footer{font-size:12px;line-height:1.9;padding:24px 20px;text-align:center}
+.xhs-site .footer a{color:inherit}
+@media(max-width:992px){.storefront-home .product-table tbody tr,.storefront-home .product-table tbody tr:not(.featured-product){column-gap:12px;grid-template-columns:minmax(0,1fr) 56px 85px 84px}.xhs-site .nav-brand a{font-size:18px}}
+@media(max-width:768px){
+ html{scroll-padding-top:72px}
+ .xhs-site .navbar{position:relative}
+ .xhs-site .nav-menu{background:#fff;backdrop-filter:none;border:1px solid #ece5eb;border-radius:16px;padding:14px 0}
+ .xhs-site .nav-brand a{font-size:16px;gap:8px}
+ .xhs-mark{width:29px;height:29px;font-size:19px;border-radius:9px}
+ .storefront-home .hero-section{padding:23px 2px 23px}
+ .storefront-home .hero-text h1{font-size:29px;line-height:1.5}
+ .storefront-home .hero-text p{font-size:13px;line-height:1.9}
+ .hero-eyebrow{font-size:11px;margin-bottom:9px}
+ .storefront-home .filter-section{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-bottom:20px}
+ .storefront-home .filter-btn{width:100%;padding:9px 3px;font-size:11px;min-width:0;white-space:normal;line-height:1.5}
+ .storefront-home .product-table tbody tr,.storefront-home .product-table tbody tr:not(.featured-product){grid-template-columns:minmax(0,1fr) auto auto;grid-template-rows:auto auto;gap:12px;padding:15px;border-radius:14px;margin-bottom:11px}
+ .storefront-home .product-table tbody td:first-child,.storefront-home .product-table tbody tr:not(.featured-product) td:first-child{grid-column:1/-1;grid-row:1;margin:0}
+ .storefront-home .product-table .title,.storefront-home .product-table tbody tr:not(.featured-product) .title{font-size:15px;line-height:1.75}
+ .storefront-home .product-summary-copy small,.storefront-home .product-table tbody tr:not(.featured-product) td:first-child small{font-size:11px;margin-top:5px}
+ .storefront-home .product-table td[data-label="价格"]{grid-column:1;grid-row:2;font-size:24px}
+ .storefront-home .product-table td[data-label="库存"]{grid-column:2;grid-row:2;font-size:11px}
+ .storefront-home .product-table td[data-label="购买"]{grid-column:3;grid-row:2;align-self:center}
+ .storefront-home .product-table .buy-link{font-size:12px;padding:7px 12px}
+ .xhs-site .product-layout{padding:12px;gap:14px;border-radius:19px}
+ .xhs-site .product-layout .product-d-title{font-size:20px;line-height:1.65}
+ .xhs-site .product-spec-grid .spec-row{padding:11px 8px;gap:4px 6px}
+ .xhs-site .product-spec-grid .spec-label,.xhs-site .product-spec-grid .spec-value{font-size:11px}
+ .xhs-site .product-layout .product-d-price{margin-bottom:14px}
+ .xhs-site .product-d-description h3{font-size:17px}
+ .xhs-site .description-d-content p{font-size:14px;line-height:1.95}
+ .xhs-site .product-grid{grid-template-columns:minmax(0,1fr)}
+ .xhs-site .breadcrumb{font-size:11px;margin:12px 0}
+ .xhs-site .product-layout .email-input,.xhs-site .quantity-input{font-size:16px}
+}
